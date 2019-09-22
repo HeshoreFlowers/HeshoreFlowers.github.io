@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>单点登录原理与简单实现 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224">
+  <meta name="description" content="##单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单点登录原理与简单实现">
 <meta property="og:url" content="http://yoursite.com/2019/09/22/单点登录原理与简单实现/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224">
+<meta property="og:description" content="##单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-22T11:54:46.366Z">
+<meta property="og:updated_time" content="2019-09-22T12:58:43.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单点登录原理与简单实现">
-<meta name="twitter:description" content="单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224">
+<meta name="twitter:description" content="##单系统登录机制1、http无状态协议　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -182,9 +182,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>单系统登录机制<br><strong>1、http无状态协议</strong><br>　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系<br><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224-831614516.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224-831614516.png</a></p>
-</blockquote>
+        <p>##单系统登录机制<br><strong>1、http无状态协议</strong><br>　　web应用采用browser/server架构，http作为通信协议。http是无状态协议，浏览器的每一次请求，服务器会独立处理，不与之前或之后的请求产生关联，这个过程用下图说明，三次请求/响应对之间没有任何联系</p>
+<a id="more"></a>
+<p><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224-831614516.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155231224-831614516.png</a></p>
 <p>　　但这也同时意味着，任何用户都能通过浏览器访问服务器资源，如果想保护服务器的某些资源，必须限制浏览器请求；要限制浏览器请求，必须鉴别浏览器请求，响应合法请求，忽略非法请求；要鉴别浏览器请求，必须清楚浏览器请求状态。既然http协议无状态，那就让服务器和浏览器共同维护一个状态吧！这就是会话机制</p>
 <p><strong>2、会话机制</strong><br>　　浏览器第一次请求服务器，服务器创建一个会话，并将会话的id作为响应的一部分发送给浏览器，浏览器存储会话id，并在后续第二次和第三次请求中带上会话id，服务器取得请求中的会话id就知道是不是同一个用户了，这个过程用下图说明，后续请求与第一次请求产生了关联</p>
 <p><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155232537-1894700627.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155232537-1894700627.png</a></p>
@@ -201,7 +201,7 @@
 <p>　　实现了登录状态的浏览器请求服务器模型如下图描述</p>
 <p><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155235084-440115945.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155235084-440115945.png</a></p>
 <p>　　每次请求受保护资源时都会检查会话对象中的登录状态，只有 isLogin=true 的会话才能访问，登录机制因此而实现。</p>
-<p>二、多系统的复杂性<br>　　web系统早已从久远的单系统发展成为如今由多系统组成的应用群，面对如此众多的系统，用户难道要一个一个登录、然后一个一个注销吗？就像下图描述的这样</p>
+<p>##二、多系统的复杂性<br>　　web系统早已从久远的单系统发展成为如今由多系统组成的应用群，面对如此众多的系统，用户难道要一个一个登录、然后一个一个注销吗？就像下图描述的这样</p>
 <p><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155236162-1706551789.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155236162-1706551789.png</a></p>
 <p>　　web系统由单系统发展成多系统组成的应用群，复杂性应该由系统内部承担，而不是用户。无论web系统内部多么复杂，对用户而言，都是一个统一的整体，也就是说，用户访问web系统的整个应用群与访问单个系统一样，登录/注销只要一次就够了<br><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155237240-1462133891.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155237240-1462133891.png</a></p>
 <p>　　虽然单系统的登录解决方案很完美，但对于多系统应用群已经不再适用了，为什么呢？</p>
@@ -209,9 +209,7 @@
 <p>　　既然这样，为什么不将web应用群中所有子系统的域名统一在一个顶级域名下，例如“*.baidu.com”，然后将它们的cookie域设置为“baidu.com”，这种做法理论上是可以的，甚至早期很多多系统登录就采用这种同域名共享cookie的方式。</p>
 <p>　　然而，可行并不代表好，共享cookie的方式存在众多局限。首先，应用群域名得统一；其次，应用群各系统使用的技术（至少是web服务器）要相同，不然cookie的key值（tomcat为JSESSIONID）不同，无法维持会话，共享cookie的方式是无法实现跨语言技术平台登录的，比如java、php、.net系统之间；第三，cookie本身不安全。</p>
 <p>　　因此，我们需要一种全新的登录方式来实现多系统应用群的登录，这就是单点登录</p>
-<blockquote>
-<p>三、单点登录<br>　　什么是单点登录？单点登录全称Single Sign On（以下简称SSO），是指在多系统应用群中登录一个系统，便可在其他所有系统中得到授权而无需再次登录，包括单点登录与单点注销两部分</p>
-</blockquote>
+<p>##三、单点登录<br>　　什么是单点登录？单点登录全称Single Sign On（以下简称SSO），是指在多系统应用群中登录一个系统，便可在其他所有系统中得到授权而无需再次登录，包括单点登录与单点注销两部分</p>
 <p><strong>1、登录</strong><br>　　相比于单系统登录，sso需要一个独立的认证中心，只有认证中心能接受用户的用户名密码等安全信息，其他系统不提供登录入口，只接受认证中心的间接授权。间接授权通过令牌实现，sso认证中心验证用户的用户名密码没问题，创建授权令牌，在接下来的跳转过程中，授权令牌作为参数发送给各个子系统，子系统拿到令牌，即得到了授权，可以借此创建局部会话，局部会话登录方式与单系统的登录方式相同。这个过程，也就是单点登录的原理，用下图说明</p>
 <p><a href="https://images2015.cnblogs.com/blog/797930/201612/797930-20161203152650974-276822362.png" target="_blank" rel="noopener">https://images2015.cnblogs.com/blog/797930/201612/797930-20161203152650974-276822362.png</a></p>
 <p>　　下面对上图简要描述</p>
@@ -226,9 +224,7 @@
 </blockquote>
 <p><a href="http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155243834-48122435.png" target="_blank" rel="noopener">http://images2015.cnblogs.com/blog/797930/201611/797930-20161129155243834-48122435.png</a></p>
 <p>　　sso认证中心与sso客户端通信方式有多种，这里以简单好用的httpClient为例，web service、rpc、restful api都可以</p>
-<blockquote>
-<p>五、实现<br>　　只是简要介绍下基于java的实现过程，不提供完整源码，明白了原理，我相信你们可以自己实现。sso采用客户端/服务端架构，我们先看sso-client与sso-server要实现的功能（下面：sso认证中心=sso-server）</p>
-</blockquote>
+<p>##五、实现<br>　　只是简要介绍下基于java的实现过程，不提供完整源码，明白了原理，我相信你们可以自己实现。sso采用客户端/服务端架构，我们先看sso-client与sso-server要实现的功能（下面：sso认证中心=sso-server）</p>
 <p>　　sso-client</p>
 <p>拦截子系统未登录用户请求，跳转至sso认证中心<br>接收并存储sso认证中心发送的令牌<br>与sso-server通信，校验令牌的有效性<br>建立局部会话<br>拦截用户注销请求，向sso认证中心发送注销请求<br>接收sso认证中心发出的注销请求，销毁局部会话<br>　　sso-server</p>
 <p>验证用户的登录信息<br>创建全局会话<br>创建授权令牌<br>与sso-client通信发送令牌<br>校验sso-client令牌有效性<br>系统注册<br>接收sso-client注销请求，注销所有会话<br>　　接下来，我们按照原理来一步步实现sso吧！</p>
