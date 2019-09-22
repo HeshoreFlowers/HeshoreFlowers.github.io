@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>单点登录 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/assets/demo/gift/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单点登录">
+<meta property="og:url" content="http://yoursite.com/2019/09/22/单点登录/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/assets/demo/gift/img/shake.png">
-<meta property="og:updated_time" content="2017-07-28T03:51:08.000Z">
+<meta property="og:updated_time" content="2019-09-22T08:05:28.591Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="礼物 - 3.8 	 	 	 	   	 	 		3.8节礼物，来了… 		 		 			 				 					首先，你要输入我的生日 					 					接着，摇一摇… 					 					最后，这就是见证奇迹的时刻… 				 				 					3.8节快乐！ 					祝身体健康,平安长乐 					请打开音量收听…">
-<meta name="twitter:image" content="http://yoursite.com/assets/demo/gift/img/shake.png">
+<meta name="twitter:title" content="单点登录">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -164,93 +162,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-单点登录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      单点登录
+    </h1>
+  
+
+        
+        <a href="/2019/09/22/单点登录/" class="archive-article-date">
+  	<time datetime="2019-09-22T08:04:14.729Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!doctype html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.9.0">
-	<meta charset="utf-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
-	<title>礼物 - 3.8</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/index.css">
-	<script src="js/zepto.min.js"></script>
-	<script src="js/shake.js"></script>
-</head>
-<body>
-	<!-- <div id="my_player"></div> -->
-	<header>
-		<p>3.8节礼物，来了…</p>
-		<div class="paper-t"></div>
-		<div class="main">
-			<div class="main-top top2">
-				<section id="se1">
-					<p>首先，你要输入我的生日</p>
-					<input id="myBir" type="text" placeholder="4位数，格式为:mmdd">
-					<p>接着，摇一摇…</p>
-					<img src="img/shake.png">
-					<p>最后，这就是见证奇迹的时刻…</p>
-				</section>
-				<section id="se2" class="hide">
-					<p>3.8节快乐！</p>
-					<p>祝身体健康,平安长乐</p>
-					<p>请打开音量收听…</p>
-				</section>
-			</div>
-		</div>
-		<div class="paper-b"></div>
-	</header>
-</body>
-	<script>
-		var Main = (function() {
-			function playAudio(src) {
-			    if (typeof Audio != "undefined") { 
-			        new Audio(src).play() ;
-			    } else if (typeof device != "undefined") {
-			        if (device.platform == 'Android') {
-			            console.log(src);
-			        }
-			        var mediaRes = new Media(src,
-			            function onSuccess() {
-			                mediaRes.release();
-			            },
-			            function onError(e){
-			                console.log("error playing sound: " + JSON.stringify(e));
-			            });
-			        mediaRes.play();
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-			    } else {
-			        alert("no sound API to play: " + src);
-			    }
-			}
-			window.addEventListener('shake', autoRun, false);
-			function autoRun(){
-				if($("#myBir").val() == "0425"){
-					$("#se1").hide();
-					$("#se2").show();
-					playAudio("media/gift.ogg");
-				}else{
-					alert("生日错误");
-				}
-				
-			}
-			var init = function() {
-				
-			}
-			return {
-				init: init
-			}
-		})();
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-		$(Main.init());
-	</script>
-</html>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
       
 
       
@@ -339,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assets/demo/gift/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/22/单点登录/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -351,6 +296,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/21/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -401,7 +356,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
